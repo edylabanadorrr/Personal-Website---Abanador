@@ -1,0 +1,227 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Kumbh Sans', play-fair;
+}
+
+.navbar {
+    background: #a6c0e0;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo {
+    background-color: purple;
+    background-image: linear-gradient(to top, #008a8a 0%, #17107d 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #131313;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #00ffff;
+    transition: all 0.3s ease;
+}
+
+/* Home Section */
+.home {
+    background: #b9daf0;
+    padding: 200px 0;
+}
+
+.home__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+}
+
+.home__heading { 
+    font-size: 100px;
+    margin: 0px;
+    background-color: lavender;
+    background-image: linear-gradient(to top, #43aff7 0%,  #1c7bba 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.home__description {
+    font-size: 30px;
+    text-align: center;
+    margin: 3px;
+    color: #0e3752;
+}
+
+.quotes {
+	color: #554af0;
+	font-size: 1.2rem;
+}
+
+/* Personal Section */
+
+.profile {
+	background: #d3e2f5;
+	padding: 200px 0;
+}
+
+.profile__container {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.profile__content {
+    color: #131313;
+    width: 100%;
+}
+
+.profile__content h1 {
+	font-size: 2.5rem;
+	text-transform: upper;
+	background-color: #518ded;
+    background-image: linear-gradient(to top, #0b5fe6 0%, #5270a1 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.profile__content p {
+	color: #485975;
+	font-size: 1.5rem;
+}
+
+.profile__content p2 {
+	color:  #131313;
+}
+
+.profile__img--container {
+	text-align: center;
+}
+
+.facebook {
+	text-decoration: none;
+}
+
+.instagram {
+	text-decoration: none;
+}
+
+.personal {
+	margin: 10px;
+    height: 500px;
+    width: 500px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+/* Project Section */
+
+.project {
+	background-color: #b9daf0;
+	padding: 200px 0;
+}
+
+
+/* Skillset */
+
+.skillset {
+	background-color: #a0e4eb;
+	padding: 200px 0;
+}
+
+
+
+
+footer {
+    background-color: #333; /* Background color of the footer */
+    color: #fff; /* Text color in the footer */
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-top: 10px; /* Adjust as needed */
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+/* Additional styling for links in the footer if needed */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 10px 0; /* Adjust as needed for spacing between links */
+    font-size: 18px; /* Adjust as needed for icon size */
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
