@@ -17,18 +17,33 @@
 			<li class="navbar__item">
                     <a href="#home" class="navbar__links"> Home </a>
                 </li>
+
                 <li class="navbar__item">
                     <a href="#profile" class="navbar__links"> Profile </a>
                 </li>
-                <li class = "navbar__item">
-                	<a href="#project" class="navbar__links"> Projects </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#skillset" class="navbar__links"> Skillset </a>
-                </li>
-				<li class="navbar__item">
-                    <a href="#ide" class="navbar__links"> IDE </a>
-                </li>
+
+                    <li class = "navbar__item navbar__dropdown">
+                        <a href="#project" class="navbar__links"> Projects </a>
+                        <div class="submenu-container">
+                            <ul class="navbar__submenu">
+                                <li><a href="#web-projects">Web Projects</a></li>
+                                <li><a href="#mobile-projects">Mobile Projects</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                        <li class="navbar__item">
+                            <a href="#skillset" class="navbar__links"> Skillset </a>
+                        </li>
+
+				            <li class="navbar__item">
+                                <a href="#ide" class="navbar__links"> IDE </a>
+                            </li>
+
+                                <li class="navbar__item">
+                                    <a href="#contact" class="navbar__links"> Contact Me </a>
+                                </li>
+
             </ul>
         </div>
     </nav>
@@ -51,20 +66,76 @@
         		</div>
         	</div>
         	<div class="profile__content">
-            <h1>Edylbert M. Abanador</h1><br><br>
+            <h1>Edylbert M. Abanador</h1>
+            <br><br><br><br><br><br>
             <p>A 21 year old man that chases his dream | INTJ</p>
+            <br><br><br><br><br>
+            <p>Motivated and aiming to use my knowledge and skills to support the
+                company’s mission and vision and use such skills and capabilities to work
+                well with people.</p>
             <br><br><br><br><br><br><br><br><br>
-            <p2> Contact me on: </p2><br><br>
-            <a class = "facebook" href="https://www.facebook.com/edylabanadorr">Facebook</a><br><br>
-            <a class = "instagram" href="https://www.instagram.com/edylabanadorrr/?hl=en">Instagram</a><br><br>
-            <p3>Gmail: abanadoredylbert@gmail.com</p3>
         </div>
     </div>
 
-    <!-- Project Section -->
-	<div class="project" id="project">
-    	<h1>This is my projects</h1>
-		</div>
+   <!-- Project Section -->
+    <div class="project" id="project">
+
+        <section class="projects-container">
+
+            <!-- Web Projects Section -->
+            <div class="web-projects" id = "web-projects">
+                <h2>Web Projects</h2>
+                
+                <!-- Individual Project Container -->
+                    <div class="webproject-container">
+                        <!-- Image on the left -->
+                        <div class="kep1er-image">
+                            <img src="img/kep1er.png" alt="Kep1er">
+                        </div>
+
+                        <!-- Text on the right -->
+                        <div class="kep1er-text">
+                            <h3>Project Title</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, vitae.</p>
+                            <!-- Add more text or details as needed -->
+                        </div>
+                    </div>
+
+                    <!-- Video Section -->
+                    <section>
+                        <h2>For more reference:</h2>
+                        <div class="kep1er-video">
+                        <video width="600" height="300" controls>
+                            <source src="video/kep1er-video.mp4" type="video/mp4">
+                            <!-- You can add additional source elements for different video formats (e.g., WebM, Ogg) -->
+                            Your browser does not support the video tag.
+                        </video>
+                        </div>
+                    </section>
+            </div>
+
+            <!-- App Projects Section -->
+            <div class="mobile-projects" id = "mobile-projects">
+                <h2>Mobile Projects</h2>
+
+                <!-- Individual Project Container -->
+                <div class="mobileproject-container">
+                    <!-- Image on the left -->
+                    <div class="batelec-image">
+                        <img src="img/landing-page.jpg" alt="batelec">
+                    </div>
+
+                    <!-- Text on the right -->
+                    <div class="batelec-text">
+                        <h3>Project Title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolore quae aliquam officia quam fugit?</p>
+                        <!-- Add more text or details as needed -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
 
 	<!-- Skillset -->
 	<div class="skillset" id="skillset">
@@ -74,7 +145,11 @@
 	<!-- IDE -->
 	<div class="ide" id="ide">
 		<h1>These are the IDEs I used</h1>
-		<h2>Trying</h2>
+		</div>
+
+        <!-- Contact -->
+	<div class="contact" id="contact">
+		<h1>You can contact me on:</h1>
 		</div>
 
 	<!-- Footer -->

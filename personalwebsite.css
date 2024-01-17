@@ -115,7 +115,7 @@
 
 .profile {
 	background: #d3e2f5;
-	padding: 200px 0;
+	padding: 100px 0;
 }
 
 .profile__container {
@@ -185,25 +185,164 @@
 
 .project {
 	background-color: #b9daf0;
-	padding: 200px 0;
+	padding: 100px 0;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-between; /* Space the two sections evenly */
+}
+
+/* Web Project Section */ 
+
+.web-projects {
+    width: 48%;
+    text-align: center;
+}
+
+.webproject-container {
+    display: flex;
+    align-items: center; /* Vertically align the image and text */
+    background-color: #d3e2f5;
+    margin: 10px;
+    margin-bottom: 20px; /* Add margin between project containers */
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.kep1er-image {
+    width: 50%; /* Adjust the width of the image container as needed */
+    padding: 10px;
+}
+
+.kep1er-image img {
+    max-width: 100%; /* Ensure the image does not exceed its container */
+}
+
+.kep1er-text {
+    width: 70%; /* Adjust the width of the text container as needed */
+    padding-left: 20px; /* Add padding between image and text */
+}
+
+/* Web Project Video */
+
+.kep1er-video {
+    margin-left: 40px;
+    background-color: #d3e2f5;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Mobile Project Section */
+
+.mobile-projects {
+    width: 48%; /* Adjust the width as needed, leaving some space between the two sections */
+    text-align: center;
+}
+
+.mobileproject-container {
+    display: flex;
+    align-items: center; /* Vertically align the image and text */
+    background-color: #d3e2f5;
+    margin: 10px;
+    margin-bottom: 20px; /* Add margin between project containers */
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.batelec-image {
+    width: 50%; /* Adjust the width of the image container as needed */
+    height: 50vh;
+    padding: 10px;
+}
+
+.batelec-image img {
+    max-width: 100%; /* Ensure the image does not exceed its container */
+    max-height: 100%;
+}
+
+.batelec-text {
+    width: 70%; /* Adjust the width of the text container as needed */
+    padding-left: 20px; /* Add padding between image and text */
+}
+
+.submenu-container {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    border-radius: 4px; /* Add rounded corners if desired */
+    padding: 10px; /* Add padding for better visual appeal */
+    transition: opacity 0.3s ease 0.3s, visibility 0.3s ease; /* Add transitions for opacity and visibility with a delayed start */
+    transition-delay: 0.3s; /* Add a delay before the fade-out effect starts */
+}
+
+.navbar__dropdown:hover .submenu-container {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s; /* Reset the delay for the fade-in effect */
+}
+
+.navbar__dropdown:not(:hover) .submenu-container {
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0.3s; /* Add a delay before the fade-out effect starts when not hovering */
+}
+
+.navbar__submenu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    transition-delay: 0.5s;
+}
+
+.navbar__submenu a {
+    text-decoration: none; /* Remove underline for all submenu links */
+}
+
+.navbar__submenu a:hover {
+    text-decoration: underline; /* Add underline on hover for all submenu links */
+}
+
+.navbar__dropdown:hover .navbar__submenu {
+    max-height: 200px; /* Set an appropriate max-height for your submenu */
+    opacity: 1; /* Fade in on hover */
+    transition-delay: 0.3s; /* Reset the delay for the fade-in effect */
+}
+
+.navbar__dropdown:not(:hover) .navbar__submenu {
+    max-height: 0;
+    opacity: 0;
+    transition-delay: 0.5s; /* Add a delay before the fade-out effect starts when not hovering */
 }
 
 
 /* Skillset */
 
 .skillset {
-	background-color: #a0e4eb;
+	background-color: #d3e2f5;
+	padding: 200px 0;
+}
+
+.ide {
+	background-color: #b9daf0;
+	padding: 200px 0;
+}
+
+.contact {
+	background-color: #d3e2f5;
 	padding: 200px 0;
 }
 
 
 
-
 footer {
-    background-color: #333; /* Background color of the footer */
+    background-color: #545454; /* Background color of the footer */
     color: #fff; /* Text color in the footer */
     text-align: center;
-    padding: 20px;
+    padding: 3px;
     position: fixed;
     bottom: 0;
     width: 100%;
