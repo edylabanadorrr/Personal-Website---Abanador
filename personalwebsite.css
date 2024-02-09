@@ -23,7 +23,7 @@
     height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 50px;
 }
@@ -70,10 +70,69 @@
     transition: all 0.3s ease;
 }
 
+.navbar__links .fa-caret-down {
+    margin-left: 10px;
+}
+
+.submenu-container {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+    transition: opacity 0.3s ease 0.3s, visibility 0.3s ease;
+    transition-delay: 0.3s;
+}
+
+.navbar__dropdown:hover .submenu-container {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.navbar__dropdown:not(:hover) .submenu-container {
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0.3s;
+}
+
+.navbar__submenu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    transition-delay: 0.5s;
+}
+
+.navbar__submenu a {
+    text-decoration: none;
+    color: #131313;
+}
+
+.navbar__submenu a:hover {
+    text-decoration: underline;
+}
+
+.navbar__dropdown:hover .navbar__submenu {
+    max-height: 200px;
+    opacity: 1; 
+    transition-delay: 0.3s; 
+}
+
+.navbar__dropdown:not(:hover) .navbar__submenu {
+    max-height: 0;
+    opacity: 0;
+    transition-delay: 0.5s;
+}
+
 /* Home Section */
+
 .home {
     background: #b9daf0;
-    padding: 200px 0;
+    min-height: 100vh;
+    width: 100%;
+    padding: 100px 0;
 }
 
 .home__container {
@@ -152,6 +211,7 @@
 .profile__content p {
 	color: #485975;
 	font-size: 1.5rem;
+    text-align: justify;
 }
 
 .profile__content p2 {
@@ -183,164 +243,187 @@
 
 /* Project Section */
 
-.project {
-	background-color: #b9daf0;
-	padding: 100px 0;
-    text-align: center;
-}
-
-.projects-container {
+.project-container{
+    background: #b9daf0;
+    position: relative;
     display: flex;
-    justify-content: space-between; /* Space the two sections evenly */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 0;
 }
 
-/* Web Project Section */ 
-
-.web-projects {
-    width: 48%;
-    text-align: center;
+.project-title {
+    color: #fdfdfd;
+    font-size: 2rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: transparent;
+    background: #284274;
+    background: linear-gradient(to top, #0b5fe6 0%, #5270a1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;    
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Ensure the title is above the cards */
 }
 
-.webproject-container {
+.project-container .project-card{
+    border-color: #b9daf0;
+    border-style: ridge;
+    border-radius: 10%;
+    width: 308px;
+    position: relative;
+    height: 355px;
+    background: #cad9f1;
+    margin: 100px 19px;
+    padding: 20px 15px;
     display: flex;
-    align-items: center; /* Vertically align the image and text */
-    background-color: #d3e2f5;
-    margin: 10px;
-    margin-bottom: 20px; /* Add margin between project containers */
-    margin-left: 100px;
+    flex-direction: column;
+    box-shadow: 0.5px 2px black;
+    transition: 0.3s ease-in-out;
+    margin-top: 5%;
+}
+
+.project-container .project-card .imgBx{
+    position: relative;
+    width: 240px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
     margin-top: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0, 1.2);
 }
 
-.kep1er-image {
-    width: 50%; /* Adjust the width of the image container as needed */
-    padding: 10px;
+.project-container .project-card .imgBx img
+{
+    max-width: 100%;
+    border-radius: 10px;
 }
 
-.kep1er-image img {
-    max-width: 100%; /* Ensure the image does not exceed its container */
+.imgBx:hover img{
+    transform: scale(1.1);
 }
 
-.kep1er-text {
-    width: 70%; /* Adjust the width of the text container as needed */
-    padding-left: 20px; /* Add padding between image and text */
-}
-
-/* Web Project Video */
-
-.kep1er-video {
-    margin-left: 40px;
-    background-color: #d3e2f5;
-    margin: 10px;
-    padding: 10px;
-}
-
-/* Mobile Project Section */
-
-.mobile-projects {
-    width: 48%; /* Adjust the width as needed, leaving some space between the two sections */
+.project-card h2, p {
     text-align: center;
-}
-
-.mobileproject-container {
-    display: flex;
-    align-items: center; /* Vertically align the image and text */
-    background-color: #d3e2f5;
-    margin: 10px;
-    margin-bottom: 20px; /* Add margin between project containers */
-    margin-left: 100px;
-    margin-top: 20px;
-}
-
-.batelec-image {
-    width: 50%; /* Adjust the width of the image container as needed */
-    height: 50vh;
-    padding: 10px;
-}
-
-.batelec-image img {
-    max-width: 100%; /* Ensure the image does not exceed its container */
-    max-height: 100%;
-}
-
-.batelec-text {
-    width: 70%; /* Adjust the width of the text container as needed */
-    padding-left: 20px; /* Add padding between image and text */
-}
-
-.submenu-container {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-    border-radius: 4px; /* Add rounded corners if desired */
-    padding: 10px; /* Add padding for better visual appeal */
-    transition: opacity 0.3s ease 0.3s, visibility 0.3s ease; /* Add transitions for opacity and visibility with a delayed start */
-    transition-delay: 0.3s; /* Add a delay before the fade-out effect starts */
-}
-
-.navbar__dropdown:hover .submenu-container {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0s; /* Reset the delay for the fade-in effect */
-}
-
-.navbar__dropdown:not(:hover) .submenu-container {
-    opacity: 0;
-    visibility: hidden;
-    transition-delay: 0.3s; /* Add a delay before the fade-out effect starts when not hovering */
-}
-
-.navbar__submenu {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    transition-delay: 0.5s;
-}
-
-.navbar__submenu a {
-    text-decoration: none; /* Remove underline for all submenu links */
-}
-
-.navbar__submenu a:hover {
-    text-decoration: underline; /* Add underline on hover for all submenu links */
-}
-
-.navbar__dropdown:hover .navbar__submenu {
-    max-height: 200px; /* Set an appropriate max-height for your submenu */
-    opacity: 1; /* Fade in on hover */
-    transition-delay: 0.3s; /* Reset the delay for the fade-in effect */
-}
-
-.navbar__dropdown:not(:hover) .navbar__submenu {
-    max-height: 0;
-    opacity: 0;
-    transition-delay: 0.5s; /* Add a delay before the fade-out effect starts when not hovering */
 }
 
 
 /* Skillset */
 
+.skillset-container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #d3e2f5;
+}
+
+.skillset-wrapper {
+    padding: 100px 0;
+}
+
 .skillset {
-	background-color: #d3e2f5;
-	padding: 200px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.ide {
-	background-color: #b9daf0;
-	padding: 200px 0;
+.skillset-title {
+    color: #fdfdfd;
+    font-size: 3rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: transparent;
+    letter-spacing: 4px;
+    background: #284274;
+    background: linear-gradient(8deg, #133b71, #133b71, #284274, #284274);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
 }
 
-.contact {
-	background-color: #d3e2f5;
-	padding: 200px 0;
+.skillset-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 80px;
 }
 
+.skillset-card {
+    height: 350px;
+    width: 370px;
+    background-color: #284274;
+    padding: 3% 8%;
+    border: 0.2px solid #133b71;
+    border-radius: 8px;
+    transition: .6s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
 
+.skillset-card::after {
+    content: "";
+    position: absolute;
+    top: 150%;
+    left: -200px;
+    width: 120%;
+    transform: rotate(50deg);
+    background-color: #133b71;
+    height: 18px;
+    filter: blur(30px);
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.skillset-card:hover:after {
+    width: 225%;
+    top: -100%;
+}
+
+.skillset-card i {
+    color: #9fafc5;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 4.8rem;
+}
+
+.skillset-card h2 {
+    color: #fdfdfd;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.skillset-card p {
+    text-align: center;
+    width: 100%;
+    margin: 12px 0;
+    color: #000;
+} 
+
+.skillset-card:hover {
+    background-color: transparent;
+    transform: translateY(-8px);
+    border-color: #aa3f52;
+}
+
+.skillset-card:hover i {
+    color: #aa3f52;
+}
+
+.skillset-card li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer */
 
 footer {
-    background-color: #545454; /* Background color of the footer */
-    color: #fff; /* Text color in the footer */
+    background: #b5aeae;
+    color: #000;
     text-align: center;
     padding: 3px;
     position: fixed;
@@ -349,16 +432,15 @@ footer {
 }
 
 footer p {
-    margin-top: 10px; /* Adjust as needed */
-    margin-bottom: 10px; /* Adjust as needed */
-}
+    margin-top: 5px;
+    margin-bottom: 5px;
+}   
 
-/* Additional styling for links in the footer if needed */
 footer a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
-    margin: 10px 10px 0; /* Adjust as needed for spacing between links */
-    font-size: 18px; /* Adjust as needed for icon size */
+    margin: 10px 10px 0;
+    font-size: 18px;
 }
 
 footer a:hover {

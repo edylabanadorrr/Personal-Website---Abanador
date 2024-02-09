@@ -23,11 +23,11 @@
                 </li>
 
                     <li class = "navbar__item navbar__dropdown">
-                        <a href="#project" class="navbar__links"> Projects </a>
+                        <a href="#project" class="navbar__links"> Projects <i class="fa fa-caret-down"></i></a>
                         <div class="submenu-container">
                             <ul class="navbar__submenu">
-                                <li><a href="#web-projects">Web Projects</a></li>
-                                <li><a href="#mobile-projects">Mobile Projects</a></li>
+                                <li><a href="web-project.html">Web Projects</a></li>
+                                <li><a href="app-project.html">Mobile Projects</a></li>
                             </ul>
                         </div>
                     </li>
@@ -35,15 +35,6 @@
                         <li class="navbar__item">
                             <a href="#skillset" class="navbar__links"> Skillset </a>
                         </li>
-
-				            <li class="navbar__item">
-                                <a href="#ide" class="navbar__links"> IDE </a>
-                            </li>
-
-                                <li class="navbar__item">
-                                    <a href="#contact" class="navbar__links"> Contact Me </a>
-                                </li>
-
             </ul>
         </div>
     </nav>
@@ -61,11 +52,12 @@
 	<!-- Profile Section -->
 	<div class="profile" id="profile">
         <div class="profile__container">
-        	<div class = "profile__img--container">
-        		<div class = "personal"> <img src="img/me.jpg">
-        		</div>
-        	</div>
-        	<div class="profile__content">
+            <div class = "profile__img--container">
+                <div class = "personal"> 
+                    <img src="img/me.jpg">
+                </div>
+            </div>
+        <div class="profile__content">
             <h1>Edylbert M. Abanador</h1>
             <br><br><br><br><br><br>
             <p>A 21 year old man that chases his dream | INTJ</p>
@@ -77,89 +69,86 @@
         </div>
     </div>
 
-   <!-- Project Section -->
-    <div class="project" id="project">
+<!-- Project Section -->
+<div class="project-container" id="project">
+    <div class="project-title">
+        <h2>Projects</h2>
+    </div>
 
-        <section class="projects-container">
+    <div class="project-card">
+        <div class="imgBx">
+            <a href="web-project.html">
+                <img src="banner/web-banner.png">
+            </a>
+            <h2>Web Projects</h2>
+            <p><br>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
 
-            <!-- Web Projects Section -->
-            <div class="web-projects" id = "web-projects">
-                <h2>Web Projects</h2>
-                
-                <!-- Individual Project Container -->
-                    <div class="webproject-container">
-                        <!-- Image on the left -->
-                        <div class="kep1er-image">
-                            <img src="img/kep1er.png" alt="Kep1er">
-                        </div>
+    <div class="project-card">
+        <div class="imgBx">
+            <a href="app-project.html">
+                <img src="banner/app-banner.png">
+            </a>
+            <h2>App Projects</h2>
+            <p><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, tenetur?</p>
+        </div>
+    </div>
+</div>
 
-                        <!-- Text on the right -->
-                        <div class="kep1er-text">
-                            <h3>Project Title</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, earum repudiandae? Accusamus porro minus nihil voluptas. Quaerat magnam et veritatis.</p>
-                            <!-- Add more text or details as needed -->
-                        </div>
+
+	<!-- Skillset -->
+	<div class = "skillset-container" id = "skillset">
+        <div class = "skillset-wrapper">
+            <div class = "skillset">
+                <h2 class = "skillset-title">My Skillsets</h2>
+                <div class = "skillset-cards">
+                    <div class = "skillset-card">
+                        <i class = "fa fa-database"></i>
+                        <h2>Programming Language</h2>
+                        <p>
+                            <ul>
+                            <li>Drone Imagery</li>
+                            <li>Aerial Photography</li>
+                            </ul>
+                        </p>
                     </div>
-
-                    <!-- Video Section -->
-                    <section>
-                        <h2>For more reference:</h2>
-                        <div class="kep1er-video">
-                        <video width="600" height="300" controls>
-                            <source src="video/kep1er-video.mp4" type="video/mp4">
-                            <!-- You can add additional source elements for different video formats (e.g., WebM, Ogg) -->
-                            Your browser does not support the video tag.
-                        </video>
-                        </div>
-                    </section>
-            </div>
-
-            <!-- App Projects Section -->
-            <div class="mobile-projects" id = "mobile-projects">
-                <h2>Mobile Projects</h2>
-
-                <!-- Individual Project Container -->
-                <div class="mobileproject-container">
-                    <!-- Image on the left -->
-                    <div class="batelec-image">
-                        <img src="img/landing-page.jpg" alt="batelec">
+                <div class = "skillset-card">
+                        <i class = "fa fa-comments"></i>
+                        <h2>Database</h2>
+                    <p>  
+                        <br>
+                        Project and/or study assessment
+                        
+                    </p>
                     </div>
-
-                    <!-- Text on the right -->
-                    <div class="batelec-text">
-                        <h3>Project Title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolore quae aliquam officia quam fugit?</p>
-                        <!-- Add more text or details as needed -->
+                    <div class = "skillset-card">
+                        <i class = "fa fa-desktop"></i>
+                        <h2>Frameworks</h2>
+                        <p> <br>
+                            Online and face to face training
+                            </p>
+                    </div>
+                    <div class = "skillset-card">
+                        <i class = "fa fa-cogs"></i>
+                        <h2>IDE</h2>
+                        <p> <br>
+                            Map creation (based on data acquired or provided)
+                            </p>
                     </div>
                 </div>
             </div>
-        </section>
-
+        </div>
     </div>
 
-	<!-- Skillset -->
-	<div class="skillset" id="skillset">
-		<h1>This is my skillset</h1>
-		</div>
-
-	<!-- IDE -->
-	<div class="ide" id="ide">
-		<h1>These are the IDEs I used</h1>
-		</div>
-
-        <!-- Contact -->
-	<div class="contact" id="contact">
-		<h1>You can contact me on:</h1>
-		</div>
-
-	<!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Abanador. All rights reserved.</p>
-		<div class="social-links">
-            <a href="https://www.facebook.com/edylabanadorr/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.instagram.com/edylabanadorrr/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/abanadoredylbert/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
-        </div>
-    </footer>
-</body>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Abanador. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/edylabanadorr/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/edylabanadorrr/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/abanadoredylbert/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </footer>
+    </body>
 </html>	
